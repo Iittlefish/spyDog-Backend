@@ -1,22 +1,15 @@
 {
-    "name": "todayiwant_backend",
+    "name": "spydog_backend",
     "version": "1.0.0",
     "main": "index.js",
     "license": "MIT",
     "scripts": {
       "typeorm": "ts-node ./node_modules/.bin/typeorm",
-      "migration:generate": "npm run typeorm -- migration:generate --config src/config/config.json --connection  --name ",
-
       "tsc"  : "tsc",
       "typeorm:cli": "ts-node ./node_modules/typeorm/cli.js ./src/config",
-      "typeorm:script": "ts-node scripts/typeorm.ts",
-      "typeorm:migration:run": "yarn typeorm:script --migrations=run",
-      "typeorm:migration:revert": "yarn typeorm:script --migrations=revert",
-      "migration-generate":"yarn typeorm migration:generate -n ",
       "clean": "sh ./scripts/clean.sh",
       "build": "sh ./scripts/build.sh",
       "build:swagger": "sh ./scripts/build.sh swagger",
-      "serve": "yarn run build && node dist/server.js",
       "serve:swagger": "yarn run build:swagger && node dist/server.js",
       "serve:quick": "node dist/server.js"
     },
