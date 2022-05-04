@@ -1,9 +1,11 @@
-import { Tags, Get, Route, Controller, Body} from "tsoa";
+import { Tags, Get, Route, Controller, Path} from "tsoa";
+import { bill } from "@/service";
 
 @Tags('hello')
 @Route('hello')
-export class findr extends Controller{
-  @Get('')
+export class hello extends Controller{
+
+  @Get("{id}")
   public async helloWorLd(
   ):Promise<string>{
     const res = "HELLO WORLD"
